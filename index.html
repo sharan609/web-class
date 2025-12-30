@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DriveNow – Car Rental</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container nav">
+    <div class="logo">Drive<span>Now</span></div>
+
+    <nav>
+      <a href="#cars">Cars</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#feedback">Feedback</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="cart-icon" onclick="toggleCart()">
+      🛒 <span id="cart-count">0</span>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>Premium Car Rentals<br>Made Easy</h1>
+      <p>Book verified cars with transparent pricing and instant confirmation.</p>
+    </div>
+
+    <div class="hero-form">
+      <h3>Quick Booking</h3>
+      <input type="text" placeholder="Pickup location">
+      <div class="row">
+        <input type="date">
+        <input type="date">
+      </div>
+      <select>
+        <option>Select vehicle type</option>
+        <option>Economy</option>
+        <option>SUV</option>
+        <option>Luxury</option>
+      </select>
+      <button class="btn primary">Search Cars</button>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="container stats-grid">
+    <div><h3>20k+</h3><p>Happy Customers</p></div>
+    <div><h3>500+</h3><p>Cars Available</p></div>
+    <div><h3>25+</h3><p>Locations</p></div>
+  </div>
+</section>
+
+<!-- CARS -->
+<section class="section" id="cars">
+  <div class="container">
+    <h2>Available Cars</h2>
+
+    <div class="car-grid">
+
+      <!-- ECONOMY -->
+      <div class="car-card">
+        <div class="car-img">
+          <img src="swift car.jpg" alt=" swift" id="id2">
+        </div>
+        <h4>Swift</h4>
+        <p>₹2,500 / day</p>
+        <button class="btn secondary" onclick="addToCart('Swift',2500)">Add to Cart</button>
+        <button class="btn primary" onclick="openBooking('Swift',2500)">Book Now</button>
+      </div>
+
+      <div class="car-card">
+        <div class="car-img">
+          <img src="baleno car2.avif" id="id2" alt="baleno">
+        </div>
+        <h4>Baleno</h4>
+        <p>₹2,800 / day</p>
+        <button class="btn secondary" onclick="addToCart('Baleno',2800)">Add to Cart</button>
+        <button class="btn primary" onclick="openBooking('Baleno',2800)">Book Now</button>
+      </div>
+
+      <!-- SUV -->
+      <div class="car-card">
+        <div class="car-img">
+          <img src="creat3.jpg" id="id2" alt="creta">
+        </div>
+        <h4>Creta</h4>
+        <p>₹3,500 / day</p>
+        <button class="btn secondary" onclick="addToCart('Creta',4500)">Add to Cart</button>
+        <button class="btn primary" onclick="openBooking('Creta',4500)">Book Now</button>
+      </div>
+
+      <div class="car-card">
+        <div class="car-img">
+           <img src="scorpio.jpg" id="id2" alt="scorpio">
+        </div>
+        <h4>Scorpio</h4>
+        <p>₹4,800 / day</p>
+        <button class="btn secondary" onclick="addToCart('Scorpio',4800)">Add to Cart</button>
+        <button class="btn primary" onclick="openBooking('Scorpio',4800)">Book Now</button>
+      </div>
+
+      <!-- LUXURY -->
+      <div class="car-card">
+        <div class="car-img">
+          <img src="bmw.jpg" id="id2" alt="bmw">
+        </div>
+        <h4>BMW</h4>
+        <p>₹8,500 / day</p>
+        <button class="btn secondary" onclick="addToCart('BMW',6500)">Add to Cart</button>
+        <button class="btn primary" onclick="openBooking('BMW',6500)">Book Now</button>
+      </div>
+
+      <div class="car-card">
+        <div class="car-img">
+          <img src="audi.jpg" id="id2" alt="audi">
+        </div>
+        <h4>Audi</h4>
+        <p>₹6,800 / day</p>
+        <button class="btn secondary" onclick="addToCart('Audi',6800)">Add to Cart</button>
+        <button class="btn primary" onclick="openBooking('Audi',6800)">Book Now</button>
+      </div>
+
+      <!-- FAMILY -->
+      <div class="car-card">
+        <div class="car-img">
+        <img src="innova.jpg" id="id2" alt="innova">
+        </div>
+        <h4>Innova</h4>
+        <p>₹5,200 / day</p>
+        <button class="btn secondary" onclick="addToCart('Innova',5200)">Add to Cart</button>
+        <button class="btn primary" onclick="openBooking('Innova',5200)">Book Now</button>
+      </div>
+
+      <div class="car-card">
+        <div class="car-img">
+        <img src="ertiga.jpg" id="id2" alt="ertiga">
+        </div>
+        <h4>Ertiga</h4>
+        <p>₹4,000 / day</p>
+        <button class="btn secondary" onclick="addToCart('Ertiga',4000)">Add to Cart</button>
+        <button class="btn primary" onclick="openBooking('Ertiga',4000)">Book Now</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section alt" id="about">
+  <div class="container about-grid">
+    <div>
+      <h2>About DriveNow</h2>
+      <p>
+        DriveNow provides reliable, insured and well-maintained vehicles
+        for business trips, family vacations and long-distance journeys.
+      </p>
+      <ul>
+        <li>✔ 24/7 roadside assistance</li>
+        <li>✔ Transparent pricing</li>
+        <li>✔ Verified drivers & cars</li>
+        <li>✔ Flexible booking</li>
+      </ul>
+    </div>
+    <div class="about-img">
+      <img src="hinode_uwu.jpg" id="id1" alt="pic">
+    </div>
+
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section" id="reviews">
+  <div class="container">
+    <h2>Customer Reviews</h2>
+
+    <div class="review-grid">
+      <div class="review-card">⭐⭐⭐⭐⭐<p>Excellent service and clean cars.</p><strong>- Rahul</strong></div>
+      <div class="review-card">⭐⭐⭐⭐☆<p>Affordable and reliable.</p><strong>- Ananya</strong></div>
+      <div class="review-card">⭐⭐⭐⭐⭐<p>Booking was very smooth.</p><strong>- Karthik</strong></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEEDBACK -->
+<section class="section alt" id="feedback">
+  <div class="container feedback-box">
+    <h2>Feedback</h2>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Email">
+    <textarea placeholder="Your feedback"></textarea>
+    <button class="btn primary">Submit Feedback</button>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p>Email: sharans721@gmail.com</p>
+    <p>Phone: +91 9797244429</p>
+  </div>
+</section>
+
+<!-- CART -->
+<div class="cart-drawer" id="cartDrawer">
+  <h3>Your Cart</h3>
+  <ul id="cart-items"></ul>
+  <p>Total: ₹<span id="total">0</span></p>
+</div>
+
+<!-- BOOKING MODAL -->
+<div class="booking-modal" id="bookingModal">
+  <div class="booking-box">
+    <h3 id="booking-car"></h3>
+    <input type="text" placeholder="Full Name">
+    <input type="tel" placeholder="Phone Number">
+    <input type="date">
+    <button class="btn primary full" onclick="confirmBooking()">Confirm Booking</button>
+    <button class="btn secondary full" onclick="closeBooking()">Cancel</button>
+  </div>
+</div>
+
+<footer class="footer">
+  © 2025 DriveNow Car Rental
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
